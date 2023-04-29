@@ -1,0 +1,419 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Isolator:6N138 U1
+U 1 1 607CDBB1
+P 6500 3350
+F 0 "U1" H 6500 3817 50  0000 C CNN
+F 1 "6N138" H 6500 3726 50  0000 C CNN
+F 2 "" H 6790 3050 50  0001 C CNN
+F 3 "http://www.onsemi.com/pub/Collateral/HCPL2731-D.pdf" H 6790 3050 50  0001 C CNN
+	1    6500 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 607CDC3E
+P 4900 3550
+F 0 "#PWR?" H 4900 3400 50  0001 C CNN
+F 1 "+5V" V 4915 3678 50  0000 L CNN
+F 2 "" H 4900 3550 50  0001 C CNN
+F 3 "" H 4900 3550 50  0001 C CNN
+	1    4900 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 607CDCC1
+P 4900 3150
+F 0 "#PWR?" H 4900 2900 50  0001 C CNN
+F 1 "GND" V 4905 3022 50  0000 R CNN
+F 2 "" H 4900 3150 50  0001 C CNN
+F 3 "" H 4900 3150 50  0001 C CNN
+	1    4900 3150
+	0    1    1    0   
+$EndComp
+Text GLabel 4900 2900 0    50   Input ~ 0
+RX(15)
+$Comp
+L Device:C C1
+U 1 1 607CDE27
+P 5450 3400
+F 0 "C1" H 5565 3446 50  0000 L CNN
+F 1 "0.1μF" H 5565 3355 50  0000 L CNN
+F 2 "" H 5488 3250 50  0001 C CNN
+F 3 "~" H 5450 3400 50  0001 C CNN
+	1    5450 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6200 3550 5850 3550
+Wire Wire Line
+	5450 3150 5450 3250
+$Comp
+L Connector:DIN-5_180degree J1
+U 1 1 607CE0BC
+P 8300 3300
+F 0 "J1" V 8346 3070 50  0000 R CNN
+F 1 "MIDI IN" V 8255 3070 50  0000 R CNN
+F 2 "" H 8300 3300 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 8300 3300 50  0001 C CNN
+	1    8300 3300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 607CE399
+P 7550 3600
+F 0 "R1" V 7343 3600 50  0000 C CNN
+F 1 "220" V 7434 3600 50  0000 C CNN
+F 2 "" V 7480 3600 50  0001 C CNN
+F 3 "~" H 7550 3600 50  0001 C CNN
+	1    7550 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 607CE4D8
+P 7050 3300
+F 0 "D1" V 7096 3221 50  0000 R CNN
+F 1 "1N4148" V 7005 3221 50  0000 R CNN
+F 2 "" H 7050 3300 50  0001 C CNN
+F 3 "~" H 7050 3300 50  0001 C CNN
+	1    7050 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6800 3250 6800 3000
+Wire Wire Line
+	6800 3450 6800 3600
+$Comp
+L Device:RF_Shield_One_Piece J3
+U 1 1 607CE87D
+P 7550 3300
+F 0 "J3" V 8317 3245 50  0000 C CNN
+F 1 "RF_Shield" V 8226 3245 50  0000 C CNN
+F 2 "" H 7550 3200 50  0001 C CNN
+F 3 "~" H 7550 3200 50  0001 C CNN
+	1    7550 3300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7950 3300 8000 3300
+Wire Wire Line
+	6800 3000 7050 3000
+Wire Wire Line
+	6800 3600 7050 3600
+Wire Wire Line
+	7050 3150 7050 3000
+Connection ~ 7050 3000
+Wire Wire Line
+	7050 3000 8200 3000
+Wire Wire Line
+	7050 3450 7050 3600
+Wire Wire Line
+	7050 3600 7400 3600
+Connection ~ 7050 3600
+Wire Wire Line
+	7700 3600 8200 3600
+Wire Wire Line
+	5450 3150 4900 3150
+Connection ~ 5450 3150
+Wire Wire Line
+	4900 3550 5450 3550
+Connection ~ 5450 3550
+Wire Wire Line
+	6200 3250 6100 3250
+Wire Wire Line
+	6100 3250 6100 2900
+Wire Wire Line
+	6100 2900 4900 2900
+NoConn ~ 6100 3150
+Wire Wire Line
+	5450 3150 6200 3150
+$Comp
+L Device:R R2
+U 1 1 607D037D
+P 5850 3400
+F 0 "R2" H 5920 3446 50  0000 L CNN
+F 1 "2.2K" H 5920 3355 50  0000 L CNN
+F 2 "" V 5780 3400 50  0001 C CNN
+F 3 "~" H 5850 3400 50  0001 C CNN
+	1    5850 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 5850 3550
+Wire Wire Line
+	5850 3550 5450 3550
+Wire Wire Line
+	5850 3250 6100 3250
+Connection ~ 6100 3250
+$Comp
+L power:GND #PWR?
+U 1 1 607D0843
+P 4900 5350
+F 0 "#PWR?" H 4900 5100 50  0001 C CNN
+F 1 "GND" V 4905 5222 50  0000 R CNN
+F 2 "" H 4900 5350 50  0001 C CNN
+F 3 "" H 4900 5350 50  0001 C CNN
+	1    4900 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 607D0878
+P 4900 4550
+F 0 "#PWR?" H 4900 4400 50  0001 C CNN
+F 1 "+5V" V 4915 4678 50  0000 L CNN
+F 2 "" H 4900 4550 50  0001 C CNN
+F 3 "" H 4900 4550 50  0001 C CNN
+	1    4900 4550
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4900 5050 0    50   Input ~ 0
+TX(12)
+$Comp
+L Connector:DIN-5_180degree J2
+U 1 1 607D08D1
+P 8850 4950
+F 0 "J2" V 8896 4721 50  0000 R CNN
+F 1 "MIDI OUT" V 8805 4721 50  0000 R CNN
+F 2 "" H 8850 4950 50  0001 C CNN
+F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 8850 4950 50  0001 C CNN
+	1    8850 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 607D114F
+P 5800 5050
+F 0 "Q1" H 5991 5096 50  0000 L CNN
+F 1 "2N3904" H 5991 5005 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6000 4975 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 5800 5050 50  0001 L CNN
+	1    5800 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q2
+U 1 1 607D1213
+P 6500 4850
+F 0 "Q2" H 6691 4896 50  0000 L CNN
+F 1 "2N3904" H 6691 4805 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6700 4775 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 6500 4850 50  0001 L CNN
+	1    6500 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 607D129E
+P 5250 5050
+F 0 "R3" V 5457 5050 50  0000 C CNN
+F 1 "10K" V 5366 5050 50  0000 C CNN
+F 2 "" V 5180 5050 50  0001 C CNN
+F 3 "~" H 5250 5050 50  0001 C CNN
+	1    5250 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 607D159E
+P 6100 4700
+F 0 "R4" H 6170 4746 50  0000 L CNN
+F 1 "2.2K" H 6170 4655 50  0000 L CNN
+F 2 "" V 6030 4700 50  0001 C CNN
+F 3 "~" H 6100 4700 50  0001 C CNN
+	1    6100 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 5050 5100 5050
+Wire Wire Line
+	5400 5050 5600 5050
+Wire Wire Line
+	5900 4850 6100 4850
+Wire Wire Line
+	6300 4850 6100 4850
+Connection ~ 6100 4850
+Wire Wire Line
+	4900 4550 6100 4550
+$Comp
+L Device:R R5
+U 1 1 607D25F3
+P 6950 4650
+F 0 "R5" V 6743 4650 50  0000 C CNN
+F 1 "270" V 6834 4650 50  0000 C CNN
+F 2 "" V 6880 4650 50  0001 C CNN
+F 3 "~" H 6950 4650 50  0001 C CNN
+	1    6950 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6600 4650 6800 4650
+Wire Wire Line
+	4900 5350 5900 5350
+Wire Wire Line
+	5900 5350 5900 5250
+Wire Wire Line
+	5900 5350 6600 5350
+Wire Wire Line
+	6600 5350 6600 5050
+Connection ~ 5900 5350
+$Comp
+L Device:C C2
+U 1 1 607D34DA
+P 7100 5000
+F 0 "C2" H 7215 5046 50  0000 L CNN
+F 1 "220pF" H 7215 4955 50  0000 L CNN
+F 2 "" H 7138 4850 50  0001 C CNN
+F 3 "~" H 7100 5000 50  0001 C CNN
+	1    7100 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 607D3646
+P 7500 5200
+F 0 "C3" H 7615 5246 50  0000 L CNN
+F 1 "220pF" H 7615 5155 50  0000 L CNN
+F 2 "" H 7538 5050 50  0001 C CNN
+F 3 "~" H 7500 5200 50  0001 C CNN
+	1    7500 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4650 7100 4850
+Wire Wire Line
+	7100 5150 7100 5350
+Wire Wire Line
+	7100 5350 6600 5350
+Connection ~ 6600 5350
+$Comp
+L Device:R R6
+U 1 1 607D4E40
+P 7350 4350
+F 0 "R6" V 7143 4350 50  0000 C CNN
+F 1 "220" V 7234 4350 50  0000 C CNN
+F 2 "" V 7280 4350 50  0001 C CNN
+F 3 "~" H 7350 4350 50  0001 C CNN
+	1    7350 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6100 4550 6100 4350
+Connection ~ 6100 4550
+Wire Wire Line
+	7100 5350 7500 5350
+Connection ~ 7100 5350
+Wire Wire Line
+	7200 4350 6100 4350
+Wire Wire Line
+	7500 4350 7500 5050
+$Comp
+L Device:RF_Shield_One_Piece J4
+U 1 1 607D899D
+P 8100 4950
+F 0 "J4" V 8867 4895 50  0000 C CNN
+F 1 "RF_Shield" V 8776 4895 50  0000 C CNN
+F 2 "" H 8100 4850 50  0001 C CNN
+F 3 "~" H 8100 4850 50  0001 C CNN
+	1    8100 4950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7100 4650 8750 4650
+Connection ~ 7100 4650
+Wire Wire Line
+	7500 5050 8500 5050
+Wire Wire Line
+	8500 5050 8500 5250
+Wire Wire Line
+	8500 5250 8750 5250
+Connection ~ 7500 5050
+Wire Wire Line
+	8500 4950 8550 4950
+$Comp
+L Connector:DB15_Male J5
+U 1 1 607DCDFA
+P 3800 4200
+F 0 "J5" H 3707 5192 50  0000 C CNN
+F 1 "Game Port" H 3707 5101 50  0000 C CNN
+F 2 "" H 3800 4200 50  0001 C CNN
+F 3 " ~" H 3800 4200 50  0001 C CNN
+	1    3800 4200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 607DE9EA
+P 4100 3500
+F 0 "#PWR?" H 4100 3350 50  0001 C CNN
+F 1 "+5V" V 4115 3628 50  0000 L CNN
+F 2 "" H 4100 3500 50  0001 C CNN
+F 3 "" H 4100 3500 50  0001 C CNN
+	1    4100 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 607DEA4F
+P 4100 4900
+F 0 "#PWR?" H 4100 4750 50  0001 C CNN
+F 1 "+5V" V 4115 5028 50  0000 L CNN
+F 2 "" H 4100 4900 50  0001 C CNN
+F 3 "" H 4100 4900 50  0001 C CNN
+	1    4100 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 607DEA90
+P 4100 4800
+F 0 "#PWR?" H 4100 4650 50  0001 C CNN
+F 1 "+5V" V 4115 4928 50  0000 L CNN
+F 2 "" H 4100 4800 50  0001 C CNN
+F 3 "" H 4100 4800 50  0001 C CNN
+	1    4100 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 607DEAE3
+P 4100 4300
+F 0 "#PWR?" H 4100 4050 50  0001 C CNN
+F 1 "GND" V 4105 4172 50  0000 R CNN
+F 2 "" H 4100 4300 50  0001 C CNN
+F 3 "" H 4100 4300 50  0001 C CNN
+	1    4100 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 607DEB88
+P 4100 4100
+F 0 "#PWR?" H 4100 3850 50  0001 C CNN
+F 1 "GND" V 4105 3972 50  0000 R CNN
+F 2 "" H 4100 4100 50  0001 C CNN
+F 3 "" H 4100 4100 50  0001 C CNN
+	1    4100 4100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4100 3600 2    50   Input ~ 0
+RX(15)
+Text GLabel 4100 4200 2    50   Input ~ 0
+TX(12)
+$EndSCHEMATC
