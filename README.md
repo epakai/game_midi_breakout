@@ -1,6 +1,6 @@
 # Game Midi Breakout
 
-This is my compact hobbyist design for converting game port (DB-15) to MIDI ports. The PCB fits inside a [GOLD-TEK/GTK DH151 connector housing](https://www.taydaelectronics.com/connectors-sockets/d-sub-connectors/d-sub-cover-15-pins-with-short-screw.html).
+This is my compact hobbyist design for converting game port (DB-15) to MIDI ports. It's made in Kicad. The PCB fits inside a [GOLD-TEK/GTK DH151 connector housing](https://www.taydaelectronics.com/connectors-sockets/d-sub-connectors/d-sub-cover-15-pins-with-short-screw.html).
 
 ** Note: This revision is untested. **
 
@@ -16,6 +16,19 @@ Here's what I changed:
     + Caps/Resistors lined up, real nice
     + Silkscreen labels for component references
     + Everything but the OptoIsolator moved around and rerouted
+
+## Pictures
+
+### What you get 
+![PCB Layout](img/layout.jpg)
+![Schematic](img/schematic.jpg)
+
+### My first attempt with all it's warts
+![Rev 1.0 Build](img/rev10_build.jpg)
+
+### 3D renders with most of the components
+![3D Render 1](img/a.jpg)
+![3D Render 2](img/b.jpg)
 
 ## BOM
 
